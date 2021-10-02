@@ -1,0 +1,6 @@
+module Pods_cs491_cs491Tests {
+  umbrella header "Pods-cs491-cs491Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
