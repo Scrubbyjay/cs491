@@ -9,8 +9,8 @@ import {
     Image
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import LinearGradient from 'react-native-linear-gradient';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+// import LinearGradient from 'react-native-linear-gradient';
+// import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from '@react-navigation/native';
 
 const SplashScreen = ({navigation}) => {
@@ -23,7 +23,7 @@ const SplashScreen = ({navigation}) => {
             <Animatable.Image 
                 animation="bounceIn"
                 duraton="1500"
-            source={require('../assets/logo.png')}
+            //source={require('../assets/logo.png')}
             style={styles.logo}
             resizeMode="stretch"
             />
