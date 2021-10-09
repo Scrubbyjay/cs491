@@ -3,45 +3,21 @@ import { StyleSheet, Text, View, Button} from "react-native"
 import {NavigationContainer} from "@react-navigation/native"
 import { createStackNavigator} from "@react-navigation/stack"
 import { DrawerContent } from "./screens/DrawerContent"
-import SignInScreen from "./screens/SignUpScreen"
+import SignInScreen from "./screens/SignInScreen"
 import RootStackScreen from "./screens/RootStackScreen"
+import HomeScreen from "./screens/HomeScreen"
 
-function HomeScreen({navigation}) {
-  return (
-    <View>
-      <Text>Home Screen</Text>
-      <Button title="Go to Details"
-      onPress={() => navigation.navigate('Details')}/>
-    </View>
-  )
-}
 
-function DetailScreen() {
-  return (
-    <View>
-      <Text>Detail Screen</Text>
-    </View>
-  )
-}
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SignInScreen">
-      <Stack.Screen name="SignIn" component={SignInScreen} />r
-        <Stack.Screen name="Home" component={HomeScreen}/>
-        <Stack.Screen name="Details" component={DetailScreen} />
+        <Stack.Screen name="SignIn" component={SignInScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  )
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-})
+  );
+};
+export default App;
