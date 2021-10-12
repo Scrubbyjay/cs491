@@ -37,10 +37,10 @@ const SignInScreen = ({navigation}) => {
 
                             {/* Form inputs view */}
                             <View style={{marginTop:50}}>
-                                <Item floatingLabel> 
+                                {/* <Item floatingLabel> 
                                     <Label>Email</Label>
                                     <Input value='test@test.com' keyboardType='email-address'/>
-                                </Item>
+                                </Item> */}
                      
                             </View>
                         </View>
