@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet} from 'react-native';
 import { Icon } from 'react-native-vector-icons/Icon';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Item from 'native-base';
 
 
 const SignInScreen = ({navigation}) => {
@@ -19,7 +20,33 @@ const SignInScreen = ({navigation}) => {
                             <Text style={styles.brandViewText}>Rutgers University</Text>
                         </View>
                     </ImageBackground>
+                    {/* Bottom View */}
+
+                    <View style={styles.bottomView}>
+                        {/* Welcome View */}
+                        <View style={{padding: 40}}>
+                            <Text style={{color:'black', fontWeight:'400', fontSize:40,}}>Welcome</Text>
+                            <Text style={{color:'black',fontWeight:'800'}}>Don't have an account?
+
+                            <Text style={{color:'gold',fontStyle:'italic'}}>
+                                {' '}
+                                Register Now
+                                </Text>
+                            </Text>
+
+                            {/* Form inputs view */}
+                            <View style={{marginTop:50,}}>
+                                {/* <Item floatingLabel style={{borderColor:'#cc0033'}}>
+                                    <Label>Email</Label>
+                                    <Input value='example@example.com' keyboardType='email-address'/>
+                                </Item> */}
+                            </View>
+                        </View>
+                    </View>
         </ScrollView>
+        //end
+    
+
     );
 };
 
@@ -36,5 +63,13 @@ const styles=StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         textTransform: 'uppercase',
+    },
+    bottomView:{
+        flex: 1.5,
+        backgroundColor: '#cc0033',
+        bottom:50,
+        borderTopStartRadius:60,
+        borderTopEndRadius:60,
+
     }
 })
