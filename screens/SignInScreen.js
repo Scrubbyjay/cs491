@@ -2,7 +2,8 @@ import React from 'react';
 import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet} from 'react-native';
 import { Icon } from 'react-native-vector-icons/Icon';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Item from 'native-base';
+import {Input, Label, Fab} from 'native-base';
+import Item from 'native-base'
 
 
 const SignInScreen = ({navigation}) => {
@@ -35,11 +36,12 @@ const SignInScreen = ({navigation}) => {
                             </Text>
 
                             {/* Form inputs view */}
-                            <View style={{marginTop:50,}}>
-                                {/* <Item floatingLabel style={{borderColor:'#cc0033'}}>
+                            <View style={{marginTop:50}}>
+                                <Item floatingLabel> 
                                     <Label>Email</Label>
-                                    <Input value='example@example.com' keyboardType='email-address'/>
-                                </Item> */}
+                                    <Input value='test@test.com' keyboardType='email-address'/>
+                                </Item>
+                     
                             </View>
                         </View>
                     </View>
