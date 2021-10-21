@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet} from 'react-native';
+import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet, useWindowDimensions} from 'react-native';
 import { Icon } from 'react-native-vector-icons/Icon';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Item, Input, Label, Fab} from 'native-base';
+import CustomInput from '../components/CustomInput';
 
 
 const SignInScreen = ({navigation}) => {
@@ -35,13 +36,10 @@ const SignInScreen = ({navigation}) => {
                             </Text>
 
                             {/* Form inputs view */}
-                            {/* <View style={{marginTop:50}}>
-                                <Item > 
-                                    <Label>Email</Label>
-                                    <Input value='test@test.com' keyboardType='email-address'/>
-                                </Item>
+                             <View style={{marginTop:50}}>
+                                 <CustomInput/>
                      
-                            </View> */}
+                            </View> 
                         </View>
                     </View>
         </ScrollView>
