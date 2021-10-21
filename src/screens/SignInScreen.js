@@ -29,7 +29,7 @@ const SignInScreen = ({navigation}) => {
                     <View style={styles.bottomView}>
                         {/* Welcome View */}
                         <View style={{padding: 40}}>
-                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Welcome, Login</Text>
+                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Sign In</Text>
                             <Text style={{color:'black',fontWeight:'800'}}>Don't have an account?
 
                             <Text style={{color:'#cc0033',fontStyle:'italic'}}>
@@ -37,11 +37,7 @@ const SignInScreen = ({navigation}) => {
                                 Register Now
                                 </Text>
                             </Text>
-
-                        
-                        </View>
-                    </View>
-                         {/* Form inputs view */}
+                            {/* Form inputs view */}
                     <View style={{marginTop:20}}>
                         <CustomInput
                         placeholder="Email" 
@@ -57,6 +53,11 @@ const SignInScreen = ({navigation}) => {
                         <CustomButton/>
                      
                     </View>
+
+                        
+                        </View>
+                    </View>
+
         </ScrollView>
         //end
     
@@ -71,6 +72,8 @@ const styles=StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        //this is hiding the background image for now
+        backgroundColor: '#F9FBFC',
     },
     brandViewText:{
         color: '#cc0033',
