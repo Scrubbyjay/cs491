@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet, useWindowDimensions} from 'react-native';
 import { Icon } from 'react-native-vector-icons/Icon';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -7,6 +7,8 @@ import CustomInput from '../components/CustomInput';
 
 
 const SignInScreen = ({navigation}) => {
+    const [email, setEmail] = useState('');
+    const[password, setPassword] = useState('');
     return (
         //Container
         <ScrollView style={{flex: 1, backgroundColor: "#ffff"}} showsVerticalScrollIndicator={false}>
@@ -26,7 +28,7 @@ const SignInScreen = ({navigation}) => {
                     <View style={styles.bottomView}>
                         {/* Welcome View */}
                         <View style={{padding: 40}}>
-                            <Text style={{color:'black', fontWeight:'400', fontSize:40,}}>Welcome</Text>
+                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Welcome, Login</Text>
                             <Text style={{color:'black',fontWeight:'800'}}>Don't have an account?
 
                             <Text style={{color:'gold',fontStyle:'italic'}}>
@@ -37,7 +39,7 @@ const SignInScreen = ({navigation}) => {
 
                             {/* Form inputs view */}
                              <View style={{marginTop:20}}>
-                                 <CustomInput/>
+                                 <CustomInput placeholder="Userame"/>
                                  <CustomInput/>
 
                      
