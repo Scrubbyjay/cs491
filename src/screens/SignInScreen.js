@@ -11,7 +11,7 @@ const SignInScreen = ({navigation}) => {
     const[password, setPassword] = useState('');
     return (
         //Container
-        <ScrollView style={{flex: 1, backgroundColor: "#ffff"}} showsVerticalScrollIndicator={false}>
+        <ScrollView style={{flex: 1, backgroundColor: "#F9FBFC"}} showsVerticalScrollIndicator={false}>
             {/* Brand View */}
             <ImageBackground 
                 source={require('../assets/thumbs.jpg')}
@@ -37,15 +37,25 @@ const SignInScreen = ({navigation}) => {
                                 </Text>
                             </Text>
 
-                            {/* Form inputs view */}
-                             <View style={{marginTop:20}}>
-                                 <CustomInput placeholder="Userame"/>
-                                 <CustomInput/>
-
-                     
-                            </View> 
+                        
                         </View>
                     </View>
+                         {/* Form inputs view */}
+                         <View style={{marginTop:20}}>
+                                 <CustomInput
+                                  placeholder="Email" 
+                                  value={email} 
+                                  setValue={setEmail}
+                                  />
+                                 <CustomInput 
+                                  placeholder="Password" 
+                                  value={password} 
+                                  setValue={setPassword} 
+                                  secureTextEntry={true}
+                                  />
+
+                     
+                            </View>
         </ScrollView>
         //end
     
