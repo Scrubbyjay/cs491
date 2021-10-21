@@ -11,7 +11,9 @@ const CustomButton = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#3b71f3'
+        backgroundColor: '#3b71f3',
+        borderRadius: 5,
+        height: 40,
     },
     text: {}
 })
