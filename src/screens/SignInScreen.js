@@ -4,6 +4,7 @@ import { Icon } from 'react-native-vector-icons/Icon';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Item, Input, Label, Fab} from 'native-base';
 import CustomInput from '../components/CustomInput';
+import CustomButton from '../components/CustomButton/CustomButton';
 
 
 const SignInScreen = ({navigation}) => {
@@ -41,21 +42,21 @@ const SignInScreen = ({navigation}) => {
                         </View>
                     </View>
                          {/* Form inputs view */}
-                         <View style={{marginTop:20}}>
-                                 <CustomInput
-                                  placeholder="Email" 
-                                  value={email} 
-                                  setValue={setEmail}
-                                  />
-                                 <CustomInput 
-                                  placeholder="Password" 
-                                  value={password} 
-                                  setValue={setPassword} 
-                                  secureTextEntry={true}
-                                  />
-
+                    <View style={{marginTop:20}}>
+                        <CustomInput
+                        placeholder="Email" 
+                        value={email} 
+                        setValue={setEmail}
+                         />
+                        <CustomInput 
+                        placeholder="Password" 
+                        value={password} 
+                        setValue={setPassword} 
+                        secureTextEntry={true}
+                        />
+                        <CustomButton/>
                      
-                            </View>
+                    </View>
         </ScrollView>
         //end
     
