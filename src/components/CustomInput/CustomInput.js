@@ -19,12 +19,13 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
         width: '100%',
-        borderColor: '#black',
+        flex: 1,
+        borderColor: '#F9FBFC',
         borderWidth: 1,
         borderRadius: 5,
         paddingHorizontal: 10,
         marginVertical: 5,
-        height: 30,
+        height: 45,
     },
     input: {},
 

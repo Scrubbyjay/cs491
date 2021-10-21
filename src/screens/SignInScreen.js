@@ -20,7 +20,7 @@ const SignInScreen = ({navigation}) => {
                     }}>
                         <View style={styles.signInView}>
                             <FontAwesome name='heart' style={{color: '#cc0033',fontSize:100}}/>
-                            <Text style={styles.brandViewText}>Rutgers University</Text>
+                            <Text style={styles.brandViewText}></Text>
                         </View>
                     </ImageBackground>
                     {/* Bottom View */}
@@ -31,7 +31,7 @@ const SignInScreen = ({navigation}) => {
                             <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Welcome, Login</Text>
                             <Text style={{color:'black',fontWeight:'800'}}>Don't have an account?
 
-                            <Text style={{color:'gold',fontStyle:'italic'}}>
+                            <Text style={{color:'#cc0033',fontStyle:'italic'}}>
                                 {' '}
                                 Register Now
                                 </Text>
@@ -79,7 +79,7 @@ const styles=StyleSheet.create({
     },
     bottomView:{
         flex: 1.5,
-        backgroundColor: '#cc0033',
+        backgroundColor: '#F9FBFC',
         bottom:50,
         borderTopStartRadius:60,
         borderTopEndRadius:60,
