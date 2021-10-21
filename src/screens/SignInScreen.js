@@ -36,8 +36,10 @@ const SignInScreen = ({navigation}) => {
                             </Text>
 
                             {/* Form inputs view */}
-                             <View style={{marginTop:50}}>
+                             <View style={{marginTop:20}}>
                                  <CustomInput/>
+                                 <CustomInput/>
+
                      
                             </View> 
                         </View>
