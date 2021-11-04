@@ -40,13 +40,6 @@ const SignInScreen = ({navigation}) => {
                         {/* Welcome View */}
                         <View style={{padding: 40}}>
                             <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Sign In</Text>
-                            <Text style={{color:'black',fontWeight:'800'}}>Don't have an account?
-
-                            <Text style={{color:'#cc0033',fontStyle:'italic'}}>
-                                {' '}
-                                Register Now
-                                </Text>
-                            </Text>
                             {/* Form inputs view */}
                     <View style={{marginTop:20}}>
                         <CustomInput
