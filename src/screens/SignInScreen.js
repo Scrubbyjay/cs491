@@ -17,6 +17,9 @@ const SignInScreen = ({navigation}) => {
     const onForgetPasswordPressed = () => {
         console.warn("Forgot Password");
     }
+    const onSignUpPressed = () => {
+        console.warn("Sign Up");
+    }
     return (
         //Container
         <ScrollView style={{flex: 1, backgroundColor: "#F9FBFC"}} showsVerticalScrollIndicator={false}>
@@ -66,8 +69,12 @@ const SignInScreen = ({navigation}) => {
                          onPress={onForgetPasswordPressed} 
                          type="TERTIARY"
                          />
+                         <CustomButton 
+                         text="Don't have an account? Sign up!"
+                         onPress={onSignUpPressed} 
+                         type="SECONDARY"
+                         />
 
-                     
                     </View>
 
                         
