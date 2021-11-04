@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     text: {
         fontWeight: 'bold',
         color: 'white',
+        paddingTop: 10,
     }
 })
 

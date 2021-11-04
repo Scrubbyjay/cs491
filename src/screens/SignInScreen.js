@@ -10,6 +10,13 @@ import CustomButton from '../components/CustomButton/CustomButton';
 const SignInScreen = ({navigation}) => {
     const [email, setEmail] = useState('');
     const[password, setPassword] = useState('');
+    const{height} = useWindowDimensions();
+    const onSignInPressed = () => {
+        console.warn("Sign In");
+    }
+    const onForgetPasswordPressed = () => {
+        console.warn("Forgot Password");
+    }
     return (
         //Container
         <ScrollView style={{flex: 1, backgroundColor: "#F9FBFC"}} showsVerticalScrollIndicator={false}>
@@ -50,7 +57,16 @@ const SignInScreen = ({navigation}) => {
                         setValue={setPassword} 
                         secureTextEntry={true}
                         />
-                        <CustomButton/>
+                        <CustomButton 
+                         text="Sign In" 
+                         onPress={onSignInPressed}
+                          />
+                        <CustomButton 
+                         text="Forgot Password"
+                         onPress={onForgetPasswordPressed} 
+                         type="TERTIARY"
+                         />
+
                      
                     </View>
 
