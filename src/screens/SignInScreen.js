@@ -68,11 +68,14 @@ const SignInScreen = ({navigation}) => {
                          text="Forgot Password"
                          onPress={onForgetPasswordPressed} 
                          type="TERTIARY"
+                         bgColor='white'
                          />
                          <CustomButton 
                          text="Don't have an account? Sign up!"
                          onPress={onSignUpPressed} 
-                         type="SECONDARY"
+                         type="TERTIARY"
+                         bgColor='#fda172'
+                         fgColor='#cc0033'
                          />
 
                     </View>
