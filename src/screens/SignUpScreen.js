@@ -7,9 +7,19 @@ import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton/CustomButton';
 
 
-const SignInScreen = ({navigation}) => {
+const SignUpScreen = ({navigation}) => {
+    const [firstName, setFirstname] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const[password, setPassword] = useState('');
+
+    {/*demographic infomation*/}
+    const [age, setAge] = useState('');
+    const [gender, setGender] = useState('');
+    const [race, setRace] = useState('');
+    const [diagnosis, setDiagnosis] = useState('');
+
+
     const{height} = useWindowDimensions();
     const onSignInPressed = () => {
         console.warn("Sign In");
@@ -84,7 +94,7 @@ const SignInScreen = ({navigation}) => {
     );
 };
 
-export default SignInScreen;
+export default SignUpScreen;
 
 const styles=StyleSheet.create({
     signInView:{
