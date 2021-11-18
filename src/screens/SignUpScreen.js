@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet, useWindowDimensions} from 'react-native';
+import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet, useWindowDimensions, AppState} from 'react-native';
 import { Icon } from 'react-native-vector-icons/Icon';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Item, Input, Label, Fab} from 'native-base';
@@ -49,9 +49,21 @@ const SignUpScreen = ({navigation}) => {
                     <View style={styles.bottomView}>
                         {/* Welcome View */}
                         <View style={{padding: 40}}>
-                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Sign In</Text>
+                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Register</Text>
                             {/* Form inputs view */}
                     <View style={{marginTop:20}}>
+
+                    <CustomInput
+                        placeholder="First Name" 
+                        value={firstName} 
+                        setValue={setFirstname}
+                         />
+                         <CustomInput
+                        placeholder="Last Name" 
+                        value={lastName} 
+                        setValue={setLastName}
+                         />
+                        
                         <CustomInput
                         placeholder="Email" 
                         value={email} 
@@ -63,18 +75,36 @@ const SignUpScreen = ({navigation}) => {
                         setValue={setPassword} 
                         secureTextEntry={true}
                         />
+
+                        <CustomInput
+                        placeholder="age" 
+                        value={age} 
+                        setValue={setAge}
+                        maxLength={3}
+                         />
+                         <CustomInput
+                        placeholder="gender" 
+                        value={gender} 
+                        setValue={setGender}
+                         />
+                         <CustomInput
+                        placeholder="race" 
+                        value={race} 
+                        setValue={setRace}
+                         />
+                         <CustomInput
+                        placeholder="diagnosis" 
+                        value={diagnosis} 
+                        setValue={setDiagnosis}
+                         />
+                         
                         <CustomButton 
-                         text="Sign In" 
+                         text="Register" 
                          onPress={onSignInPressed}
                           />
-                        <CustomButton 
-                         text="Forgot Password"
-                         onPress={onForgetPasswordPressed} 
-                         type="TERTIARY"
-                         bgColor='white'
-                         />
+ 
                          <CustomButton 
-                         text="Don't have an account? Sign up!"
+                         text="Already have an account? Login"
                          onPress={onSignUpPressed} 
                          type="TERTIARY"
                          bgColor='#fda172'
