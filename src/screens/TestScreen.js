@@ -6,34 +6,21 @@ import CustomButton from '../components/CustomButton/CustomButton';
 import CustomInput from '../components/CustomInput';
 
 const TestScreen = ({navigation}) => {
-    const [firstName, setFirstname] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const[password, setPassword] = useState('');
-
-    {/*demographic infomation*/}
-    const [age, setAge] = useState('');
-    const [gender, setGender] = useState('');
-    const [race, setRace] = useState('');
-    const [diagnosis, setDiagnosis] = useState('');
 
 
     const{height} = useWindowDimensions();
-    const onSignInPressed = () => {
-        console.warn("Sign In");
+    const onStartPressed = () => {
+        console.warn("Start Pressed");
     }
-    const onForgetPasswordPressed = () => {
-        console.warn("Forgot Password");
+    const onStopPressed = () => {
+        console.warn("Stop Pressed");
     }
-    const onSignUpPressed = () => {
-        console.warn("Sign Up");
-    }
+
     return (
         //Container
         <ScrollView style={{flex: 1, backgroundColor: "#F9FBFC"}} showsVerticalScrollIndicator={false}>
             {/* Brand View */}
             <ImageBackground 
-                source={require('../assets/thumbs.jpg')}
                 style={{
                     height: Dimensions.get('window').height / 2.5, resizeMode: 'contain', width: '100%', flex: 1,
                     }}>
@@ -47,63 +34,18 @@ const TestScreen = ({navigation}) => {
                     <View style={styles.bottomView}>
                         {/* Welcome View */}
                         <View style={{padding: 40}}>
-                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Register</Text>
+                            <Text style={{color:'black', fontWeight:'400', fontSize:30,}}>Test Screen</Text>
                             {/* Form inputs view */}
                     <View style={{marginTop:20}}>
 
-                    <CustomInput
-                        placeholder="First Name" 
-                        value={firstName} 
-                        setValue={setFirstname}
-                         />
-                         <CustomInput
-                        placeholder="Last Name" 
-                        value={lastName} 
-                        setValue={setLastName}
-                         />
-                        
-                        <CustomInput
-                        placeholder="Email" 
-                        value={email} 
-                        setValue={setEmail}
-                         />
-                        <CustomInput 
-                        placeholder="Password" 
-                        value={password} 
-                        setValue={setPassword} 
-                        secureTextEntry={true}
-                        />
-
-                        <CustomInput
-                        placeholder="age" 
-                        value={age} 
-                        setValue={setAge}
-                        maxLength={3}
-                         />
-                         <CustomInput
-                        placeholder="gender" 
-                        value={gender} 
-                        setValue={setGender}
-                         />
-                         <CustomInput
-                        placeholder="race" 
-                        value={race} 
-                        setValue={setRace}
-                         />
-                         <CustomInput
-                        placeholder="diagnosis" 
-                        value={diagnosis} 
-                        setValue={setDiagnosis}
-                         />
-                         
                         <CustomButton 
-                         text="Register" 
-                         onPress={onSignInPressed}
+                         text="Start Recording" 
+                         onPress={onStartPressed}
                           />
  
                          <CustomButton 
-                         text="Already have an account? Login"
-                         onPress={onSignUpPressed} 
+                         text="Stop Recording"
+                         onPress={onStopPressed} 
                          type="TERTIARY"
                          bgColor='#fda172'
                          fgColor='#cc0033'
