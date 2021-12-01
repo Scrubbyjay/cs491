@@ -3,8 +3,6 @@ import { Text, View, ScrollView, ImageBackground, Dimensions, StyleSheet, useWin
 import sensors from 'react-native-sensors';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import CustomButton from '../components/CustomButton/CustomButton';
-import CustomInput from '../components/CustomInput';
-
 const TestScreen = ({navigation}) => {
 
 
